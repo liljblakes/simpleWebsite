@@ -1,188 +1,349 @@
-<style> 
-/* ---------- Base ---------- */
-* { box-sizing: border-box; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Services Industry</title>
 
-:root{
-  --bg: #0b1220;
-  --card: #101b33;
-  --text: #e8eefc;
-  --muted: #b8c4e6;
-  --accent: #66a3ff;
-  --border: rgba(255,255,255,0.12);
-  --danger: rgba(255, 90, 90, 0.14);
-}
+  <style>
+  /* ---------- Base ---------- */
+  * { box-sizing: border-box; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 800px at 20% 10%, rgba(102,163,255,0.18), transparent 60%),
-              radial-gradient(1000px 700px at 80% 20%, rgba(140,255,195,0.10), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+  :root{
+    --bg: #0b1220;
+    --card: #101b33;
+    --text: #e8eefc;
+    --muted: #b8c4e6;
+    --accent: #66a3ff;
+    --border: rgba(255,255,255,0.12);
+    --danger: rgba(255, 90, 90, 0.14);
+  }
 
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 14px;
-}
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 800px at 20% 10%, rgba(102,163,255,0.18), transparent 60%),
+                radial-gradient(1000px 700px at 80% 20%, rgba(140,255,195,0.10), transparent 55%),
+                var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
 
-/* ---------- Layout ---------- */
-.container{
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 18px 0;
-}
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 14px;
+  }
 
-.card{
-  background: rgba(16, 27, 51, 0.88);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px;
-  margin: 16px 0;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
-}
+  /* ---------- Layout ---------- */
+  .container{
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 18px 0;
+  }
 
-.danger{
-  background: linear-gradient(180deg, var(--danger), rgba(16,27,51,0.88));
-  border-color: rgba(255, 90, 90, 0.28);
-}
+  .card{
+    background: rgba(16, 27, 51, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    margin: 16px 0;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+  }
 
-/* ---------- Header / Nav ---------- */
-.site-header{
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(11, 18, 32, 0.65);
-  border-bottom: 1px solid var(--border);
-  z-index: 10;
-}
+  .danger{
+    background: linear-gradient(180deg, var(--danger), rgba(16,27,51,0.88));
+    border-color: rgba(255, 90, 90, 0.28);
+  }
 
-.header-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
+  /* ---------- Header / Nav ---------- */
+  .site-header{
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(11, 18, 32, 0.65);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+  }
 
-.site-title{
-  font-size: 1.15rem;
-  margin: 0;
-  letter-spacing: 0.4px;
-}
+  .header-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
 
-.nav{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  .site-title{
+    font-size: 1.15rem;
+    margin: 0;
+    letter-spacing: 0.4px;
+  }
 
-.nav-link{
-  text-decoration: none;
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 8px 12px;
-  border-radius: 999px;
-  transition: transform 0.06s ease, border-color 0.2s ease;
-}
+  .nav{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 
-.nav-link:hover{
-  transform: translateY(-1px);
-  border-color: rgba(102,163,255,0.55);
-}
+  .nav-link{
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: transform 0.06s ease, border-color 0.2s ease;
+  }
 
-.nav-link.active{
-  border-color: rgba(102,163,255,0.9);
-  box-shadow: 0 0 0 3px rgba(102,163,255,0.12);
-}
+  .nav-link:hover{
+    transform: translateY(-1px);
+    border-color: rgba(102,163,255,0.55);
+  }
 
-/* ---------- Hero ---------- */
-.hero{
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 16px;
-  align-items: start;
-}
+  .nav-link.active{
+    border-color: rgba(102,163,255,0.9);
+    box-shadow: 0 0 0 3px rgba(102,163,255,0.12);
+  }
 
-.hero h2{
-  margin-top: 0;
-}
-
-.hero-media figcaption{
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.note{
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 0;
-}
-
-/* ---------- Content ---------- */
-h2{
-  margin: 0 0 10px;
-  font-size: 1.25rem;
-}
-
-h3{
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-}
-
-.bullets{
-  margin: 0;
-  padding-left: 20px;
-}
-
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.tile{
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 14px;
-  background: rgba(255,255,255,0.04);
-}
-
-.tile p{
-  margin: 8px 0 0;
-  color: var(--muted);
-}
-
-/* ---------- Footer ---------- */
-.site-footer{
-  border-top: 1px solid var(--border);
-  margin-top: 22px;
-  background: rgba(11, 18, 32, 0.55);
-}
-
-.footer-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.small{
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 860px){
+  /* ---------- Hero ---------- */
   .hero{
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 16px;
+    align-items: start;
   }
+
+  .hero h2{
+    margin-top: 0;
+  }
+
+  .hero-media figcaption{
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .note{
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  /* ---------- Content ---------- */
+  h2{
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+  }
+
+  h3{
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+  }
+
+  .bullets{
+    margin: 0;
+    padding-left: 20px;
+  }
+
   .grid{
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
-}
-</style>
+
+  .tile{
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .tile p{
+    margin: 8px 0 0;
+    color: var(--muted);
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer{
+    border-top: 1px solid var(--border);
+    margin-top: 22px;
+    background: rgba(11, 18, 32, 0.55);
+  }
+
+  .footer-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .small{
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .hero{
+      grid-template-columns: 1fr;
+    }
+    .grid{
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="site-title">Financial Services Industry</h1>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Values</a>
+        <a class="nav-link active" href="industry.html">Cybersecurity</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO (Industry + Image) -->
+    <section class="hero card">
+      <div class="hero-text">
+        <h2>Industry Overview</h2>
+        <p>
+          The financial services industry includes banking, investing, brokerage firms, lending, and payment systems.
+          It’s a high-value target for cyberattacks because it handles money movement and sensitive customer data.
+        </p>
+        <p class="note">
+          This page covers an industry of interest, a career path, an ethical issue, and key cybersecurity risks and best practices.
+        </p>
+      </div>
+
+      <figure class="hero-media">
+        <!-- Image that WORKS on GitHub Pages without uploading files -->
+        <img
+          src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1400&q=60"
+          alt="Financial district skyline representing the financial services industry">
+        <figcaption>Image related to the financial services industry.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CAREER -->
+    <section class="card">
+      <h2>Career of Interest</h2>
+      <p>
+        A career that interests me in this industry is a <strong>Financial Analyst / Investment Analyst</strong>.
+        This role involves analyzing financial statements, researching companies and markets, building models,
+        and making recommendations that support better financial decisions.
+      </p>
+    </section>
+
+    <!-- ETHICAL ISSUE -->
+    <section class="card">
+      <h2>Ethical Issue That Could Arise</h2>
+      <p>
+        An ethical issue in this industry is a <strong>conflict of interest</strong>. For example, an analyst could be pressured
+        to recommend an investment that benefits the firm (or personal relationships) instead of making the most honest,
+        evidence-based recommendation for a client.
+      </p>
+    </section>
+
+    <!-- VALUES RESPONSE -->
+    <section class="card">
+      <h2>How My Personal Values Shape My Response</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>Integrity</h3>
+          <p>
+            I would be honest and transparent, and I would not recommend something I don’t truly believe is right for the client.
+          </p>
+        </article>
+        <article class="tile">
+          <h3>Discipline</h3>
+          <p>
+            I would follow policies, document my research, and stick to the proper process even when there’s pressure to “rush.”
+          </p>
+        </article>
+        <article class="tile">
+          <h3>Curiosity & Growth</h3>
+          <p>
+            I would ask questions, seek mentorship, and learn the correct way to handle gray-area situations.
+          </p>
+        </article>
+        <article class="tile">
+          <h3>Respect</h3>
+          <p>
+            I would prioritize client trust and long-term relationships over short-term wins or personal gain.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CYBER ISSUES -->
+    <section class="card">
+      <h2>Cybersecurity Issues in This Industry/Career</h2>
+      <ul class="bullets">
+        <li><strong>Phishing & social engineering:</strong> attackers trick employees into giving up credentials.</li>
+        <li><strong>Account takeover:</strong> stolen passwords are used to access customer accounts.</li>
+        <li><strong>Ransomware:</strong> systems get locked and operations are disrupted.</li>
+        <li><strong>Data breaches:</strong> sensitive identity and financial data can be exposed.</li>
+        <li><strong>Fraudulent transactions:</strong> unauthorized transfers or payment manipulation.</li>
+      </ul>
+    </section>
+
+    <!-- BEST PRACTICES -->
+    <section class="card">
+      <h2>Cybersecurity Best Practices in Financial Services</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>Multi-Factor Authentication (MFA)</h3>
+          <p>Reduces risk from stolen passwords by requiring a second verification step.</p>
+        </article>
+        <article class="tile">
+          <h3>Least Privilege Access</h3>
+          <p>Employees only get the access they need, limiting damage if an account is compromised.</p>
+        </article>
+        <article class="tile">
+          <h3>Encryption</h3>
+          <p>Protects sensitive data while stored (at rest) and while moving through networks (in transit).</p>
+        </article>
+        <article class="tile">
+          <h3>Patching & Updates</h3>
+          <p>Fixes known vulnerabilities quickly so attackers can’t exploit outdated software.</p>
+        </article>
+        <article class="tile">
+          <h3>Monitoring & Logging</h3>
+          <p>Detects unusual logins, suspicious behavior, and irregular transactions early.</p>
+        </article>
+        <article class="tile">
+          <h3>Security Training + Incident Response</h3>
+          <p>Training reduces human error; an incident plan ensures fast containment and recovery.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RAMIFICATIONS / EMPHASIS (optional but strong) -->
+    <section class="card danger">
+      <h2>Why This Matters</h2>
+      <p>
+        In financial services, ethical choices and cybersecurity practices directly protect customers’ money, privacy,
+        and trust. Strong security reduces fraud, prevents outages, and limits the impact of attacks.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> Industry Cybersecurity Page</p>
+      <p class="small">Built with HTML & CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
