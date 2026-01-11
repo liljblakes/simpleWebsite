@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- REQUIRED: title must be "___ Industry" -->
+  <meta charset="UTF-8">
   <title>Financial Services Industry</title>
 
-  <!-- REQUIRED: Embedded CSS + consistent look with page 1 -->
+  <!-- Embedded CSS (same style as index.html) -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -20,158 +17,108 @@
     header {
       background-color: #101b33;
       padding: 16px;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      position: sticky;
-      top: 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      color: #66a3ff;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    p {
+      color: #b8c4e6;
+    }
+
+    ul {
+      color: #b8c4e6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px;
+      color: #b8c4e6;
+      border-top: 1px solid #333;
+      margin-top: 30px;
     }
 
     nav a {
       color: #e8eefc;
       text-decoration: none;
       margin-right: 12px;
-      padding: 6px 10px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
+      font-weight: bold;
     }
-
-    nav a.active {
-      border-color: rgba(102,163,255,0.9);
-    }
-
-    main {
-      width: min(1000px, 92%);
-      margin: 0 auto;
-      padding: 18px 0;
-    }
-
-    .card {
-      background: rgba(16, 27, 51, 0.88);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 16px;
-      margin: 14px 0;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
-    }
-
-    h1 { margin: 0; }
-    h2 { color: #66a3ff; margin-top: 0; }
-
-    p { color: #b8c4e6; }
-
-    img {
-      max-width: 100%;
-      display: block;
-      margin: 12px auto;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      padding: 14px;
-      text-align: center;
-      color: #b8c4e6;
-      margin-top: 20px;
-    }
-
-    .small { font-size: 0.95rem; }
-    ul { color: #b8c4e6; }
   </style>
 </head>
 
 <body>
-  <header>
-    <!-- REQUIRED: H1, H2, p usage -->
-    <h1>Financial Services Industry</h1>
 
-    <nav class="small">
-      <a href="index.html">Personal Values</a>
-      <a class="active" href="industry.html">Industry & Cybersecurity</a>
-    </nav>
-  </header>
+<header>
+  <h1>Financial Services Industry</h1>
+  <nav>
+    <a href="index.html">Personal Values</a>
+    <a href="industry.html">Industry Page</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="card">
-      <h2>Industry Overview</h2>
-      <p>
-        The financial services industry includes banking, investing, brokerage firms, and payment systems.
-        This industry is important because it handles money movement, personal financial data, lending,
-        and investment decisions that affect individuals and businesses.
-      </p>
+<main>
 
-      <!-- REQUIRED: at least one industry-related image -->
-      <!-- Put an image file named "industry.jpg" in the same folder as this HTML file -->
-      <img src="cybersecurity.jpg" alt="Cybersecurity and finance image representing the financial services industry">
-      <p class="small">Image related to the financial services industry.</p>
-    </section>
+  <h2>Industry Overview</h2>
+  <p>
+    The financial services industry includes banking, investing, brokerage firms, and payment systems.
+    This industry plays a critical role in managing money, supporting economic growth, and protecting
+    sensitive financial information.
+  </p>
 
-    <section class="card">
-      <h2>Career of Interest</h2>
-      <p>
-        A career I’m interested in within financial services is a <strong>Financial Analyst / Investment Analyst</strong>.
-        This role involves evaluating companies, analyzing financial statements, building models, and making
-        recommendations that help clients or firms make better investing decisions.
-      </p>
-    </section>
+  <h2>Career of Interest</h2>
+  <p>
+    A career that interests me in this industry is working as a financial analyst or investment analyst.
+    This role involves analyzing financial data, evaluating companies, and helping clients or firms make
+    informed financial decisions.
+  </p>
 
-    <section class="card">
-      <h2>Ethical Issue That Could Arise</h2>
-      <p>
-        One ethical issue in this industry is <strong>conflicts of interest</strong>. For example, an analyst could feel pressure
-        to recommend an investment that benefits the firm (or personal relationships) instead of making the most honest,
-        evidence-based recommendation for the client.
-      </p>
-    </section>
+  <h2>Ethical Issue in This Industry</h2>
+  <p>
+    An ethical issue that could arise in financial services is a conflict of interest. For example,
+    professionals may feel pressure to recommend investments that benefit themselves or their company
+    instead of acting in the best interest of clients.
+  </p>
 
-    <section class="card">
-      <h2>How My Personal Values Shape My Response</h2>
-      <p>
-        My personal values guide how I would respond to ethical pressure:
-      </p>
-      <ul>
-        <li><strong>Integrity:</strong> I would be truthful and transparent, and I would not recommend something I don’t genuinely believe in.</li>
-        <li><strong>Discipline:</strong> I would follow policies and do the work the right way (documented research, proper process), even if it’s slower.</li>
-        <li><strong>Growth:</strong> I would seek feedback, mentorship, and training to handle ethical gray areas correctly and keep improving.</li>
-        <li><strong>Respect:</strong> I would prioritize client trust and long-term relationships over short-term wins.</li>
-      </ul>
-    </section>
+  <h2>How My Personal Values Shape My Response</h2>
+  <p>
+    My personal values strongly influence how I would respond to ethical challenges. Integrity would
+    guide me to be honest and transparent. Discipline would help me follow proper procedures and policies.
+    Growth would encourage me to seek guidance when faced with ethical uncertainty, and respect would
+    ensure I prioritize client trust over short-term gains.
+  </p>
 
-    <section class="card">
-      <h2>Cybersecurity Issues in This Industry/Career</h2>
-      <p>
-        Financial services is a major target for cyberattacks because attackers can steal money or valuable identity data.
-        Cybersecurity issues that could arise include:
-      </p>
-      <ul>
-        <li><strong>Phishing & social engineering</strong> that steals employee or customer credentials</li>
-        <li><strong>Account takeover</strong> using leaked passwords</li>
-        <li><strong>Ransomware</strong> that locks systems and disrupts operations</li>
-        <li><strong>Data breaches</strong> exposing sensitive customer information (identity and financial data)</li>
-        <li><strong>Fraudulent transactions</strong> (unauthorized transfers or payment manipulation)</li>
-      </ul>
-    </section>
+  <h2>Cybersecurity Issues in This Industry</h2>
+  <p>
+    Financial services is a major target for cyberattacks because it handles sensitive data and money.
+    Cybersecurity issues include phishing attacks, stolen credentials, ransomware, data breaches,
+    and fraudulent transactions.
+  </p>
 
-    <section class="card">
-      <h2>Cybersecurity Best Practices in Financial Services</h2>
-      <p>
-        Best practices that help protect systems, customers, and money include:
-      </p>
-      <ul>
-        <li><strong>Multi-Factor Authentication (MFA):</strong> reduces risk from stolen passwords</li>
-        <li><strong>Least privilege access:</strong> employees only get the access they need</li>
-        <li><strong>Encryption:</strong> protects data in transit and at rest</li>
-        <li><strong>Patching & updates:</strong> fixes known vulnerabilities quickly</li>
-        <li><strong>Monitoring & logging:</strong> detects suspicious logins and unusual transactions</li>
-        <li><strong>Security training:</strong> helps employees recognize phishing and scams</li>
-        <li><strong>Incident response plan:</strong> a step-by-step plan to contain and recover from attacks</li>
-        <li><strong>Backups:</strong> reduces impact if ransomware hits critical systems</li>
-      </ul>
-    </section>
-  </main>
+  <h2>Cybersecurity Best Practices</h2>
+  <p>
+    Cybersecurity best practices in financial services include using multi-factor authentication,
+    limiting user access based on role, encrypting sensitive data, regularly updating systems,
+    monitoring activity for suspicious behavior, training employees on cybersecurity awareness,
+    and maintaining incident response and backup plans.
+  </p>
 
-  <footer>
-    <p class="small">© 2026 Industry Website Page</p>
-  </footer>
+</main>
+
+<footer>
+  <p>© 2026 Industry Page</p>
+</footer>
+
 </body>
 </html>
-
