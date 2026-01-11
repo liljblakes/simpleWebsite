@@ -3,311 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Industry Cybersecurity Best Practices</title>
-<style>
-    /* ---------- Base ---------- */
-* { box-sizing: border-box; }
 
-:root{
-  --bg: #0b1220;
-  --card: #101b33;
-  --text: #e8eefc;
-  --muted: #b8c4e6;
-  --accent: #66a3ff;
-  --border: rgba(255,255,255,0.12);
-  --danger: rgba(255, 90, 90, 0.14);
-}
+  <!-- REQUIRED: title must be "___ Industry" -->
+  <title>Financial Services Industry</title>
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 800px at 20% 10%, rgba(102,163,255,0.18), transparent 60%),
-              radial-gradient(1000px 700px at 80% 20%, rgba(140,255,195,0.10), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+  <!-- REQUIRED: Embedded CSS + consistent look with page 1 -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0b1220;
+      color: #e8eefc;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 14px;
-}
+    header {
+      background-color: #101b33;
+      padding: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      position: sticky;
+      top: 0;
+    }
 
-/* ---------- Layout ---------- */
-.container{
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 18px 0;
-}
+    nav a {
+      color: #e8eefc;
+      text-decoration: none;
+      margin-right: 12px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+    }
 
-.card{
-  background: rgba(16, 27, 51, 0.88);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px;
-  margin: 16px 0;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
-}
+    nav a.active {
+      border-color: rgba(102,163,255,0.9);
+    }
 
-.danger{
-  background: linear-gradient(180deg, var(--danger), rgba(16,27,51,0.88));
-  border-color: rgba(255, 90, 90, 0.28);
-}
+    main {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+      padding: 18px 0;
+    }
 
-/* ---------- Header / Nav ---------- */
-.site-header{
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(11, 18, 32, 0.65);
-  border-bottom: 1px solid var(--border);
-  z-index: 10;
-}
+    .card {
+      background: rgba(16, 27, 51, 0.88);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 16px;
+      margin: 14px 0;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+    }
 
-.header-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
+    h1 { margin: 0; }
+    h2 { color: #66a3ff; margin-top: 0; }
 
-.site-title{
-  font-size: 1.15rem;
-  margin: 0;
-  letter-spacing: 0.4px;
-}
+    p { color: #b8c4e6; }
 
-.nav{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 12px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
 
-.nav-link{
-  text-decoration: none;
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 8px 12px;
-  border-radius: 999px;
-  transition: transform 0.06s ease, border-color 0.2s ease;
-}
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 14px;
+      text-align: center;
+      color: #b8c4e6;
+      margin-top: 20px;
+    }
 
-.nav-link:hover{
-  transform: translateY(-1px);
-  border-color: rgba(102,163,255,0.55);
-}
-
-.nav-link.active{
-  border-color: rgba(102,163,255,0.9);
-  box-shadow: 0 0 0 3px rgba(102,163,255,0.12);
-}
-
-/* ---------- Hero ---------- */
-.hero{
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.hero h2{
-  margin-top: 0;
-}
-
-.hero-media figcaption{
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.note{
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 0;
-}
-
-/* ---------- Content ---------- */
-h2{
-  margin: 0 0 10px;
-  font-size: 1.25rem;
-}
-
-h3{
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-}
-
-.bullets{
-  margin: 0;
-  padding-left: 20px;
-}
-
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.tile{
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 14px;
-  background: rgba(255,255,255,0.04);
-}
-
-.tile p{
-  margin: 8px 0 0;
-  color: var(--muted);
-}
-
-/* ---------- Footer ---------- */
-.site-footer{
-  border-top: 1px solid var(--border);
-  margin-top: 22px;
-  background: rgba(11, 18, 32, 0.55);
-}
-
-.footer-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.small{
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 860px){
-  .hero{
-    grid-template-columns: 1fr;
-  }
-  .grid{
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-></head>
+    .small { font-size: 0.95rem; }
+    ul { color: #b8c4e6; }
+  </style>
+</head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-flex">
-      <h1 class="site-title">Industry & Cybersecurity</h1>
-      <nav class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link active" href="industry.html">Industry</a>
-      </nav>
-    </div>
+  <header>
+    <!-- REQUIRED: H1, H2, p usage -->
+    <h1>Financial Services Industry</h1>
+
+    <nav class="small">
+      <a href="index.html">Personal Values</a>
+      <a class="active" href="industry.html">Industry & Cybersecurity</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="hero card">
-      <div class="hero-text">
-        <h2>Industry: Financial Services (Banking, Investing, Trading)</h2>
-        <p>
-          Financial services is a high-value target for cyberattacks because it handles money movement,
-          sensitive personal data, account access, and high-speed transactions.
-          Even a small breach can lead to fraud, identity theft, and major reputational damage.
-        </p>
-        <p class="note">        </p>
-      </div>
+  <main>
+    <section class="card">
+      <h2>Industry Overview</h2>
+      <p>
+        The financial services industry includes banking, investing, brokerage firms, and payment systems.
+        This industry is important because it handles money movement, personal financial data, lending,
+        and investment decisions that affect individuals and businesses.
+      </p>
 
-      <figure class="hero-media">
-        <img src="cybersecurity.jpg" alt="A cybersecurity-themed image such as a lock, server room, or code screen." />
-      </figure>
+      <!-- REQUIRED: at least one industry-related image -->
+      <!-- Put an image file named "industry.jpg" in the same folder as this HTML file -->
+      <img src="industry.jpg" alt="Cybersecurity and finance image representing the financial services industry">
+      <p class="small">Image related to the financial services industry.</p>
     </section>
 
     <section class="card">
-      <h2>Common Threats in Financial Services</h2>
-      <ul class="bullets">
-        <li><strong>Phishing & social engineering:</strong> attackers trick people into giving up login info.</li>
-        <li><strong>Account takeover:</strong> stolen passwords used to access banking or brokerage accounts.</li>
-        <li><strong>Ransomware:</strong> systems are locked until a ransom is demanded.</li>
-        <li><strong>Payment fraud:</strong> unauthorized transfers, fake invoices, or card fraud.</li>
-        <li><strong>Data breaches:</strong> exposure of personal data like SSNs, addresses, or account details.</li>
+      <h2>Career of Interest</h2>
+      <p>
+        A career I’m interested in within financial services is a <strong>Financial Analyst / Investment Analyst</strong>.
+        This role involves evaluating companies, analyzing financial statements, building models, and making
+        recommendations that help clients or firms make better investing decisions.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Ethical Issue That Could Arise</h2>
+      <p>
+        One ethical issue in this industry is <strong>conflicts of interest</strong>. For example, an analyst could feel pressure
+        to recommend an investment that benefits the firm (or personal relationships) instead of making the most honest,
+        evidence-based recommendation for the client.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>How My Personal Values Shape My Response</h2>
+      <p>
+        My personal values guide how I would respond to ethical pressure:
+      </p>
+      <ul>
+        <li><strong>Integrity:</strong> I would be truthful and transparent, and I would not recommend something I don’t genuinely believe in.</li>
+        <li><strong>Discipline:</strong> I would follow policies and do the work the right way (documented research, proper process), even if it’s slower.</li>
+        <li><strong>Growth:</strong> I would seek feedback, mentorship, and training to handle ethical gray areas correctly and keep improving.</li>
+        <li><strong>Respect:</strong> I would prioritize client trust and long-term relationships over short-term wins.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Cybersecurity Best Practices (What Organizations Should Do)</h2>
-
-      <div class="grid">
-        <article class="tile">
-          <h3>1) Multi-Factor Authentication (MFA)</h3>
-          <p>Require MFA for employees and customers to reduce risk from stolen passwords.</p>
-        </article>
-
-        <article class="tile">
-          <h3>2) Least Privilege Access</h3>
-          <p>Users only get the access they need. This limits damage if an account is compromised.</p>
-        </article>
-
-        <article class="tile">
-          <h3>3) Strong Password + Credential Policies</h3>
-          <p>Use password managers, block reused passwords, and monitor for leaked credentials.</p>
-        </article>
-
-        <article class="tile">
-          <h3>4) Encryption (In Transit & At Rest)</h3>
-          <p>Protect sensitive data while it moves through networks and while stored on servers.</p>
-        </article>
-
-        <article class="tile">
-          <h3>5) Secure Software & Patch Management</h3>
-          <p>Update systems quickly to fix known vulnerabilities and reduce exploit risk.</p>
-        </article>
-
-        <article class="tile">
-          <h3>6) Logging, Monitoring, and Alerts</h3>
-          <p>Track suspicious activity (unusual logins, transfers, or data access) and respond fast.</p>
-        </article>
-
-        <article class="tile">
-          <h3>7) Employee Security Training</h3>
-          <p>Train people to recognize phishing, fake links, and social engineering attempts.</p>
-        </article>
-
-        <article class="tile">
-          <h3>8) Incident Response Plan</h3>
-          <p>Have a clear plan: detect, contain, recover, and notify. Practice it with drills.</p>
-        </article>
-      </div>
+      <h2>Cybersecurity Issues in This Industry/Career</h2>
+      <p>
+        Financial services is a major target for cyberattacks because attackers can steal money or valuable identity data.
+        Cybersecurity issues that could arise include:
+      </p>
+      <ul>
+        <li><strong>Phishing & social engineering</strong> that steals employee or customer credentials</li>
+        <li><strong>Account takeover</strong> using leaked passwords</li>
+        <li><strong>Ransomware</strong> that locks systems and disrupts operations</li>
+        <li><strong>Data breaches</strong> exposing sensitive customer information (identity and financial data)</li>
+        <li><strong>Fraudulent transactions</strong> (unauthorized transfers or payment manipulation)</li>
+      </ul>
     </section>
 
     <section class="card">
-      <h2>How These Practices Protect People</h2>
+      <h2>Cybersecurity Best Practices in Financial Services</h2>
       <p>
-        In financial services, cybersecurity is not just an IT issue—it directly protects customers’ money,
-        privacy, and trust. Strong controls prevent fraud, reduce downtime, and limit the impact of attacks.
+        Best practices that help protect systems, customers, and money include:
       </p>
-    </section>
-
-    <section class="card danger">
-      <h2>What Happens When Best Practices Are Ignored</h2>
-      <ul class="bullets">
-        <li><strong>Customer harm:</strong> stolen funds, identity theft, and long-term stress.</li>
-        <li><strong>Business losses:</strong> lawsuits, fines, and expensive recovery efforts.</li>
-        <li><strong>Operational downtime:</strong> services go offline and employees can’t work.</li>
-        <li><strong>Reputation damage:</strong> people stop trusting the company with their data and money.</li>
+      <ul>
+        <li><strong>Multi-Factor Authentication (MFA):</strong> reduces risk from stolen passwords</li>
+        <li><strong>Least privilege access:</strong> employees only get the access they need</li>
+        <li><strong>Encryption:</strong> protects data in transit and at rest</li>
+        <li><strong>Patching & updates:</strong> fixes known vulnerabilities quickly</li>
+        <li><strong>Monitoring & logging:</strong> detects suspicious logins and unusual transactions</li>
+        <li><strong>Security training:</strong> helps employees recognize phishing and scams</li>
+        <li><strong>Incident response plan:</strong> a step-by-step plan to contain and recover from attacks</li>
+        <li><strong>Backups:</strong> reduces impact if ransomware hits critical systems</li>
       </ul>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-flex">
-      <p>© <span id="year"></span> Industry Cybersecurity Page</p>
-      <p class="small">Built with HTML & CSS</p>
-    </div>
+  <footer>
+    <p class="small">© 2026 Industry Website Page</p>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
