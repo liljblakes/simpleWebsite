@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Values</title>
+<style>
+    /* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+:root{
+  --bg: #0b1220;
+  --card: #101b33;
+  --text: #e8eefc;
+  --muted: #b8c4e6;
+  --accent: #66a3ff;
+  --border: rgba(255,255,255,0.12);
+  --danger: rgba(255, 90, 90, 0.14);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(102,163,255,0.18), transparent 60%),
+              radial-gradient(1000px 700px at 80% 20%, rgba(140,255,195,0.10), transparent 55%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ---------- Layout ---------- */
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 18px 0;
+}
+
+.card{
+  background: rgba(16, 27, 51, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  margin: 16px 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+}
+
+.danger{
+  background: linear-gradient(180deg, var(--danger), rgba(16,27,51,0.88));
+  border-color: rgba(255, 90, 90, 0.28);
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header{
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 18, 32, 0.65);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.header-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.site-title{
+  font-size: 1.15rem;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.nav{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: transform 0.06s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover{
+  transform: translateY(-1px);
+  border-color: rgba(102,163,255,0.55);
+}
+
+.nav-link.active{
+  border-color: rgba(102,163,255,0.9);
+  box-shadow: 0 0 0 3px rgba(102,163,255,0.12);
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.hero h2{
+  margin-top: 0;
+}
+
+.hero-media figcaption{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.note{
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ---------- Content ---------- */
+h2{
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+h3{
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.bullets{
+  margin: 0;
+  padding-left: 20px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tile{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(255,255,255,0.04);
+}
+
+.tile p{
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top: 1px solid var(--border);
+  margin-top: 22px;
+  background: rgba(11, 18, 32, 0.55);
+}
+
+.footer-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.small{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px){
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="site-title">Personal Values</h1>
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">Values</a>
+        <a class="nav-link" href="industry.html">Industry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-text">
+        <h2>What I Stand For</h2>
+        <p>
+          My values are the “rules I live by” when I make decisions—especially when no one is watching.
+          They shape my relationships, my work ethic, and how I handle pressure.
+        </p>
+        <p class="note">
+        </p>
+      </div>
+
+      <figure class="hero-media">
+        <!-- Put an image in your folder named values.jpg (or change the src to match your file). -->
+        <img src="values.jpg" alt="A symbolic image representing personal values (e.g., compass, mountain, or journal)." />
+      </figure>
+    </section>
+
+    <section class="card">
+      <h2>My Top Four Values</h2>
+
+      <div class="grid">
+        <article class="tile">
+          <h3>1) Integrity</h3>
+          <p><strong>What it means:</strong> Doing the right thing even when it’s inconvenient.</p>
+          <p><strong>How I live it:</strong> Being honest about my work, owning mistakes fast, and keeping my word.</p>
+        </article>
+
+        <article class="tile">
+          <h3>2) Discipline</h3>
+          <p><strong>What it means:</strong> Consistency over motivation—showing up and putting in the reps.</p>
+          <p><strong>How I live it:</strong> Sticking to routines, training, and focusing on long-term goals.</p>
+        </article>
+
+        <article class="tile">
+          <h3>3) Curiosity & Growth</h3>
+          <p><strong>What it means:</strong> Always learning, asking better questions, and improving.</p>
+          <p><strong>How I live it:</strong> Taking feedback, building skills, and not staying comfortable.</p>
+        </article>
+
+        <article class="tile">
+          <h3>4) Kindness & Respect</h3>
+          <p><strong>What it means:</strong> Treating people well—especially when it’s easy to be dismissive.</p>
+          <p><strong>How I live it:</strong> Listening first, assuming good intent, and being a steady presence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Where These Values Come From</h2>
+      <ul class="bullets">
+        <li><strong>Family & upbringing:</strong> Seeing how trust is built (or broken) through daily actions.</li>
+        <li><strong>Sports & fitness:</strong> Discipline taught me that results follow consistency.</li>
+        <li><strong>School & career goals:</strong> Integrity matters in business—reputation is everything.</li>
+        <li><strong>Real life pressure:</strong> Stress reveals character; values keep me grounded.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Why These Values Matter to Me</h2>
+      <p>
+        These values help me stay focused and confident in my decisions. They act like a filter:
+        if a choice hurts my integrity, weakens my discipline, stops my growth, or disrespects others,
+        it’s not worth it—even if it looks like a shortcut.
+      </p>
+    </section>
+
+    <section class="card danger">
+      <h2>What Happens If I Don’t Adhere to These Values</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>Integrity</h3>
+          <p>If I compromise integrity, I lose trust—once trust is gone, relationships and opportunities shrink fast.</p>
+        </article>
+        <article class="tile">
+          <h3>Discipline</h3>
+          <p>If I stop being disciplined, I become inconsistent, and my goals turn into “ideas” instead of outcomes.</p>
+        </article>
+        <article class="tile">
+          <h3>Curiosity & Growth</h3>
+          <p>If I stop learning, I get comfortable and fall behind—my potential stays unused.</p>
+        </article>
+        <article class="tile">
+          <h3>Kindness & Respect</h3>
+          <p>If I lose respect for others, I damage connections and become someone I wouldn’t want to be around.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> Personal Website</p>
+      <p class="small">Built with HTML & CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
